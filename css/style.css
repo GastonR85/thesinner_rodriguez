@@ -1,0 +1,426 @@
+/*Reset inicial*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*Body*/
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #255459;
+    
+}
+
+/*Header body*/
+.title {
+    width: 100%;
+    height: 500px;
+    background: #44A08D;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #093637, #44A08D);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(181, 72%, 13%, 0.664), #44a08dc0),url(../img/img_wave.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    background-size:cover; 
+    background-attachment: fixed;
+    position: relative;   
+}
+    
+.wave{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.title > .content-title{
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.content-title-one { 
+    color: white;
+    font-size: 5em;
+    font-weight: lighter;
+    margin:0;
+    padding:0;
+}
+.content-title-two {
+    color: white;
+    font-size:8em;
+    font-weight: lighter;
+    letter-spacing: 25px;
+    margin-top: -45px; 
+    padding: 0;
+    border-bottom: 1px solid white;
+}
+.content-title-three {
+    color: white;
+    font: size 3em;;
+    font-weight: lighter;
+    letter-spacing: 20px;
+    padding-top: 10px;
+}
+
+/* ------------Inicio Grid ----------------*/
+.container {
+    background: #44A08D;  
+    background: -webkit-linear-gradient(to right, #093637, #44A08D);  
+    background: linear-gradient(to right, #093637, #44A08D); 
+    
+    width: 95%;
+    max-width: 1500px;
+    margin: 1em auto;
+
+    display: grid;
+    border-radius: 30px;
+    gap: 2em;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows:auto 500px 500px auto;
+    /*Utilizamos las Grid - Areas */
+    grid-template-areas: "header header header header"
+                         "content-one content-two content-three content-four"
+                         "review1 review2 review3 review4"
+                         "footer footer footer footer";
+
+}
+
+.container > .header,
+.container > .content-one,
+.container > .content-two,
+.container > .content-three,
+.container > .content-four,
+.container > .review,
+.container > .footer {
+    padding: 20px;
+    background-color: hsla(146, 25%, 67%, 0.116);
+    border-radius: 30px;
+    
+}
+
+/*-----------Header--------------*/
+
+.container .header{
+    text-align: center; 
+    grid-area: header;
+
+}
+nav > a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 60px;
+}
+
+/*---------Temporada uno-------------*/
+.container .content-one{
+    text-align: center; 
+    grid-area: content-one;
+}
+.content-one {
+    width: 100%;
+    background-image:url(../img/temporada-1.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content:flex-end;
+    flex-direction: column; 
+}
+.content-one div {
+    background-color: rgba(173, 224, 224, 0.644);
+    padding: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.content-one div a {
+    color: black;
+    font-size: 25px;
+    font-weight: bolder;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+/* ----- Temporada dos ------ */
+.container .content-two{
+    text-align: center; 
+    grid-area: content-two;
+}
+.content-two {
+    width: 100%;
+    background-image:url(../img/temporada-2.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content:flex-end;
+    flex-direction: column; 
+}
+.content-two div {
+    background-color: rgba(173, 224, 224, 0.644);
+    padding: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.content-two div a {
+    color: black;
+    font-size: 25px;
+    font-weight: bolder;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+/*-----Temporada  tres -------*/
+.container .content-three{
+    text-align: center; 
+    grid-area: content-three;
+}
+.content-three {
+    width: 100%;
+    background-image:url(../img/temporada-3.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content:flex-end;
+    flex-direction: column; 
+}
+.content-three div {
+    background-color: rgba(173, 224, 224, 0.644);
+    padding: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.content-three div a {
+    color: black;
+    font-size: 25px;
+    font-weight: bolder;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+/*-------Temporada 4-------------*/
+.container .content-four{
+    text-align: center; 
+    grid-area: content-four;
+}
+.content-four {
+    width: 100%;
+    background-image:url(../img/temporada-4.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content:flex-end;
+    flex-direction: column; 
+}
+.content-four div {
+    background-color: rgba(173, 224, 224, 0.644);
+    padding: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.content-four div a {
+    color: black;
+    font-size: 25px;
+    font-weight: bolder;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+/*--------Criticas 1 ----------*/
+.container .review1{
+    text-align: center;
+    border: 1px solid #093637;
+    grid-area: review1;
+    background-color: #255459;
+    display: flex;
+    border-radius: 30px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.review1 img {
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 100px;
+    background-color: aliceblue;
+}
+.review1 p{
+    color: white;
+    text-align: center;
+    font-size: 20Px;
+    margin-top: 20px;
+}
+
+/*--------Criticas 2 ----------*/
+.container .review2{
+    text-align: center;
+    border: 1px solid #093637;
+    grid-area: review2;
+    background-color: #255459;
+    display: flex;
+    border-radius: 30px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.review2 img {
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 100px;
+    background-color: aliceblue;
+}
+.review2 p{
+    color: white;
+    text-align: center;
+    font-size: 20Px;
+    margin-top: 20px;
+}
+/*--------Criticas 3 ----------*/
+.container .review3{
+    text-align: center;
+    border: 1px solid #093637;
+    grid-area: review3;
+    background-color: #255459;
+    display: flex;
+    border-radius: 30px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.review3 img {
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 100px;
+    background-color: aliceblue;
+}
+.review3 p{
+    color: white;
+    text-align: center;
+    font-size: 20Px;
+    margin-top: 20px;
+}
+/*--------Criticas 4 ----------*/
+.container .review4{
+    text-align: center;
+    border: 1px solid #093637;
+    grid-area: review4;
+    background-color: #255459;
+    display: flex;
+    border-radius: 30px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.review4 img {
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 100px;
+    background-color: aliceblue;
+}
+.review4 p{
+    color: white;
+    text-align: center;
+    font-size: 20Px;
+    margin-top: 20px;
+}
+/*-------Footer-----------*/
+.container .footer{
+    text-align: center;
+    grid-area: footer;
+}
+.footer > h1 {
+        text-decoration: none;
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+        padding: 0 30px;
+}
+
+@media screen and (max-width: 900px) {
+    .title {
+        width: 900px;
+    
+    }
+    .container{
+        width: 900px;
+        margin: 1em auto;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows:auto;
+        grid-template-areas: "header header"
+                            "content-one content-two" 
+                            "content-three content-four"
+                             "review1 review2"
+                             "review3 review4" 
+                             "footer footer";
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .title {
+        width: 768px;
+    
+    }
+    .container{
+        width: 768px;
+        margin: 1em auto;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows:auto;
+        grid-template-areas: "header"
+                            "content-one" 
+                            "content-two"
+                            "content-three"
+                            "content-four"
+                             "review1"
+                             "review2"
+                             "review3" 
+                             "review4"
+                            "footer";
+    }
+
+}
+@media screen and (max-width: 500px) {
+    .title {
+        width: 500px;
+    
+    }
+    .container{
+        width: 500px;
+        margin: 1em auto;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows:auto;
+        grid-template-areas: "header"
+                            "content-one" 
+                            "content-two"
+                            "content-three"
+                            "content-four"
+                             "review1"
+                             "review2"
+                             "review3" 
+                             "review4"
+                            "footer";
+    }
+
+}
+@media screen and (max-width: 480px) {
+    .content-title{
+        width: 480px;
+    }
+    .container{
+        width: 480;
+        height: 1500px;
+        margin: 1em auto;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(10,auto);
+        grid-template-areas: "header"
+                            "content-one" 
+                            "content-two"
+                            "content-three"
+                            "content-four"
+                             "review1"
+                             "review2"
+                             "review3" 
+                             "review4"
+                            "footer";
+    }
+
+}
